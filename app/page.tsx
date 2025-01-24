@@ -1,101 +1,109 @@
-import Image from "next/image";
+import Image from "next/image"
+import Link from "next/link"
+import { CalendarDays, MapPin, Users, Zap, Globe, TrendingUp } from "lucide-react"
 
 export default function Home() {
   return (
-    <div className="grid grid-rows-[20px_1fr_20px] items-center justify-items-center min-h-screen p-8 pb-20 gap-16 sm:p-20 font-[family-name:var(--font-geist-sans)]">
-      <main className="flex flex-col gap-8 row-start-2 items-center sm:items-start">
-        <Image
-          className="dark:invert"
-          src="/next.svg"
-          alt="Next.js logo"
-          width={180}
-          height={38}
-          priority
-        />
-        <ol className="list-inside list-decimal text-sm text-center sm:text-left font-[family-name:var(--font-geist-mono)]">
-          <li className="mb-2">
-            Get started by editing{" "}
-            <code className="bg-black/[.05] dark:bg-white/[.06] px-1 py-0.5 rounded font-semibold">
-              app/page.tsx
-            </code>
-            .
-          </li>
-          <li>Save and see your changes instantly.</li>
-        </ol>
-
-        <div className="flex gap-4 items-center flex-col sm:flex-row">
-          <a
-            className="rounded-full border border-solid border-transparent transition-colors flex items-center justify-center bg-foreground text-background gap-2 hover:bg-[#383838] dark:hover:bg-[#ccc] text-sm sm:text-base h-10 sm:h-12 px-4 sm:px-5"
-            href="https://vercel.com/new?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
+    <main className="min-h-screen bg-gradient-to-b from-gray-100 to-white">
+      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        {/* Hero Section */}
+        <section className="py-20 md:py-32 flex flex-col md:flex-row items-center">
+          <div className="md:w-1/2 mb-10 md:mb-0">
+            <h1 className="text-5xl md:text-6xl font-bold text-blue-800 mb-4 leading-tight">
+              Future DigiTech Summit 2025
+            </h1>
+            <p className="text-xl md:text-2xl text-gray-700 mb-8">
+              Empowering Innovation & Transforming the Digital Frontier
+            </p>
+            <div className="flex flex-col sm:flex-row gap-4 mb-8">
+              <div className="flex items-center bg-white rounded-full px-4 py-2 shadow-md">
+                <CalendarDays className="text-teal-600 mr-2" />
+                <span className="text-gray-800 font-semibold">28–29 May 2025</span>
+              </div>
+              <div className="flex items-center bg-white rounded-full px-4 py-2 shadow-md">
+                <MapPin className="text-teal-600 mr-2" />
+                <span className="text-gray-800 font-semibold">Malaysia</span>
+              </div>
+            </div>
+            <Link
+              href="/register"
+              className="inline-block bg-blue-800 text-white text-xl font-semibold py-3 px-8 rounded-full hover:bg-blue-700 transition duration-300 shadow-lg hover:shadow-xl transform hover:-translate-y-1"
+            >
+              Register Now
+            </Link>
+          </div>
+          <div className="md:w-1/2">
             <Image
-              className="dark:invert"
-              src="/vercel.svg"
-              alt="Vercel logomark"
-              width={20}
-              height={20}
+              src="/hero-image.jpg"
+              alt="Future DigiTech Summit"
+              width={600}
+              height={400}
+              className="rounded-lg shadow-2xl"
             />
-            Deploy now
-          </a>
-          <a
-            className="rounded-full border border-solid border-black/[.08] dark:border-white/[.145] transition-colors flex items-center justify-center hover:bg-[#f2f2f2] dark:hover:bg-[#1a1a1a] hover:border-transparent text-sm sm:text-base h-10 sm:h-12 px-4 sm:px-5 sm:min-w-44"
-            href="https://nextjs.org/docs?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
+          </div>
+        </section>
+
+        {/* Organizer Section */}
+        <section className="py-16 border-t border-gray-200">
+          <h2 className="text-2xl font-semibold text-gray-800 mb-6 text-center">Organized by</h2>
+          <div className="flex justify-center items-center">
+            <Image
+              src="/tascon-group-logo.png"
+              alt="TASCON Group Logo"
+              width={200}
+              height={100}
+              className="h-20 w-auto"
+            />
+            <span className="ml-4 text-2xl font-bold text-gray-900">TASCON Group</span>
+          </div>
+        </section>
+
+        {/* About the Summit Section */}
+        <section className="py-16 border-t border-gray-200">
+          <h2 className="text-3xl font-bold text-blue-800 mb-8 text-center">About the Summit</h2>
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-12">
+            <div className="bg-white rounded-lg shadow-lg p-8">
+              <h3 className="text-2xl font-semibold text-teal-600 mb-4">Event Overview</h3>
+              <p className="text-gray-700 leading-relaxed">
+                Join us at the Future DigiTech Summit 2025, where industry leaders, innovators, and visionaries come
+                together to explore the latest trends and technologies shaping our digital future. This two-day event
+                promises insightful discussions, hands-on workshops, and unparalleled networking opportunities.
+              </p>
+            </div>
+            <div className="bg-white rounded-lg shadow-lg p-8">
+              <h3 className="text-2xl font-semibold text-teal-600 mb-4">Why Attend?</h3>
+              <ul className="space-y-3">
+                {[
+                  { icon: Users, text: "Network with industry leaders and innovators" },
+                  { icon: Zap, text: "Gain insights from world-class speakers and experts" },
+                  { icon: Globe, text: "Explore cutting-edge technologies and solutions" },
+                  { icon: TrendingUp, text: "Stay ahead in the evolving digital landscape" },
+                ].map((item, index) => (
+                  <li key={index} className="flex items-start">
+                    <item.icon className="text-purple-600 mr-3 mt-1 flex-shrink-0" />
+                    <span className="text-gray-700">{item.text}</span>
+                  </li>
+                ))}
+              </ul>
+            </div>
+          </div>
+        </section>
+
+        {/* Call to Action Section */}
+        <section className="py-20 text-center bg-gray-100 rounded-lg mt-16">
+          <h2 className="text-3xl font-bold text-blue-800 mb-4">Ready to Shape the Future?</h2>
+          <p className="text-xl text-gray-700 mb-8 max-w-2xl mx-auto">
+            Don't miss this opportunity to be part of the most innovative tech summit of the year. Secure your spot now!
+          </p>
+          <Link
+            href="/register"
+            className="inline-block bg-purple-600 text-white text-xl font-semibold py-3 px-8 rounded-full hover:bg-purple-700 transition duration-300 shadow-lg hover:shadow-xl transform hover:-translate-y-1"
           >
-            Read our docs
-          </a>
-        </div>
-      </main>
-      <footer className="row-start-3 flex gap-6 flex-wrap items-center justify-center">
-        <a
-          className="flex items-center gap-2 hover:underline hover:underline-offset-4"
-          href="https://nextjs.org/learn?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <Image
-            aria-hidden
-            src="/file.svg"
-            alt="File icon"
-            width={16}
-            height={16}
-          />
-          Learn
-        </a>
-        <a
-          className="flex items-center gap-2 hover:underline hover:underline-offset-4"
-          href="https://vercel.com/templates?framework=next.js&utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <Image
-            aria-hidden
-            src="/window.svg"
-            alt="Window icon"
-            width={16}
-            height={16}
-          />
-          Examples
-        </a>
-        <a
-          className="flex items-center gap-2 hover:underline hover:underline-offset-4"
-          href="https://nextjs.org?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <Image
-            aria-hidden
-            src="/globe.svg"
-            alt="Globe icon"
-            width={16}
-            height={16}
-          />
-          Go to nextjs.org →
-        </a>
-      </footer>
-    </div>
-  );
+            Register Now
+          </Link>
+        </section>
+      </div>
+    </main>
+  )
 }
+
