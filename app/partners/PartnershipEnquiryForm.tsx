@@ -28,7 +28,7 @@ export default function PartnershipEnquiryForm() {
       <div className="bg-white shadow sm:rounded-lg p-6">
         <h3 className="text-lg font-medium text-gray-900">Thank You!</h3>
         <p className="mt-2 text-sm text-gray-500">
-          We've received your partnership enquiry and will get back to you soon.
+          We&apos;ve received your partnership enquiry and will get back to you soon.
         </p>
       </div>
     )

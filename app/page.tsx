@@ -93,7 +93,7 @@ export default function Home() {
         <section className="py-20 text-center bg-gray-100 rounded-lg mt-16">
           <h2 className="text-3xl font-bold text-blue-800 mb-4">Ready to Shape the Future?</h2>
           <p className="text-xl text-gray-700 mb-8 max-w-2xl mx-auto">
-            Don't miss this opportunity to be part of the most innovative tech summit of the year. Secure your spot now!
+            Don&apos;t miss this opportunity to be part of the most innovative tech summit of the year. Secure your spot now!
           </p>
           <Link
             href="/register"

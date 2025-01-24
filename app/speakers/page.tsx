@@ -11,7 +11,7 @@ export default function SpeakersPage() {
             <h3 className="text-lg leading-6 font-medium text-gray-900">Stay Tuned!</h3>
             <div className="mt-2 max-w-xl text-sm text-gray-500">
               <p>
-                We're in the process of confirming an exciting lineup of industry-leading speakers. Check back soon for
+                We&apos;re in the process of confirming an exciting lineup of industry-leading speakers. Check back soon for
                 updates!
               </p>
             </div>

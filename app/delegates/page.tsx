@@ -49,7 +49,7 @@ export default function DelegatesPage() {
         <section className="text-center mt-12">
           <h2 className="text-2xl font-semibold text-gray-800 mb-4">Ready to Join Us?</h2>
           <p className="text-gray-600 mb-6">
-            Don't miss this opportunity to be part of the most exciting tech event of the year. Download our brochure to
+            Don&apos;t miss this opportunity to be part of the most exciting tech event of the year. Download our brochure to
             learn more about the summit agenda and registration details.
           </p>
           <Link
