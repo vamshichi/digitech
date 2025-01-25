@@ -20,7 +20,7 @@ export default function NewsletterSignup() {
           <div className="bg-white py-8 px-4 shadow sm:rounded-lg sm:px-10">
             <h2 className="mt-6 text-center text-3xl font-extrabold text-gray-900">Thank You!</h2>
             <p className="mt-2 text-center text-sm text-gray-600">
-              You've been added to our mailing list. We'll notify you when speakers are announced.
+              You&apos;ve been added to our mailing list. We&apos;ll notify you when speakers are announced.
             </p>
           </div>
         </div>
