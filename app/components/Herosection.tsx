@@ -37,7 +37,7 @@ export function HeroSection() {
               </div>
             </div>
             <Link
-              href="/register"
+              href="/contact"
               className="inline-block bg-gradient-to-r from-pink-500 to-yellow-500 text-white text-lg font-semibold py-3 px-12 rounded-full shadow-lg transform hover:scale-105 transition-all duration-300"
             >
               Register Now

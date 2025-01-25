@@ -89,7 +89,7 @@ export default function Home() {
       Don&apos;t miss this opportunity to be part of the most innovative tech summit of the year. Secure your spot now and join the pioneers shaping tomorrow!
     </p>
     <Link
-      href="/register"
+      href="/contact"
       className="inline-block bg-gradient-to-r from-purple-600 to-blue-600 text-white text-lg md:text-xl font-medium py-3 px-10 rounded-full shadow-lg hover:bg-gradient-to-l hover:scale-105 transition-all duration-300 transform"
     >
       Register Now
