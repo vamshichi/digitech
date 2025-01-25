@@ -1,6 +1,6 @@
 import Image from "next/image";
 import Link from "next/link";
-import { CalendarDays, MapPin, Users, Zap, Globe, TrendingUp } from "lucide-react";
+import { Users, Zap, Globe, TrendingUp } from "lucide-react";
 import Tascon from '@/public/images/icon.png'
 import { HeroSection } from "./components/Herosection";
 
