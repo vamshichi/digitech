@@ -1,109 +1,103 @@
-import Image from "next/image"
-import Link from "next/link"
-import { CalendarDays, MapPin, Users, Zap, Globe, TrendingUp } from "lucide-react"
+import Image from "next/image";
+import Link from "next/link";
+import { CalendarDays, MapPin, Users, Zap, Globe, TrendingUp } from "lucide-react";
+import Tascon from '@/public/images/icon.png'
+import { HeroSection } from "./components/Herosection";
+
+// import {HeroSection} from "./components/Herosection";
 
 export default function Home() {
   return (
-    <main className="min-h-screen bg-gradient-to-b from-gray-100 to-white">
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+    <main className="bg-gradient-to-r from-blue-100 to-purple-100">
+      <HeroSection />
+      {/* <HeroSection />    */}
+      <div >
         {/* Hero Section */}
-        <section className="py-20 md:py-32 flex flex-col md:flex-row items-center">
-          <div className="md:w-1/2 mb-10 md:mb-0">
-            <h1 className="text-5xl md:text-6xl font-bold text-blue-800 mb-4 leading-tight">
-              Future DigiTech Summit 2025
-            </h1>
-            <p className="text-xl md:text-2xl text-gray-700 mb-8">
-              Empowering Innovation & Transforming the Digital Frontier
-            </p>
-            <div className="flex flex-col sm:flex-row gap-4 mb-8">
-              <div className="flex items-center bg-white rounded-full px-4 py-2 shadow-md">
-                <CalendarDays className="text-teal-600 mr-2" />
-                <span className="text-gray-800 font-semibold">28–29 May 2025</span>
-              </div>
-              <div className="flex items-center bg-white rounded-full px-4 py-2 shadow-md">
-                <MapPin className="text-teal-600 mr-2" />
-                <span className="text-gray-800 font-semibold">Malaysia</span>
-              </div>
-            </div>
-            <Link
-              href="/register"
-              className="inline-block bg-blue-800 text-white text-xl font-semibold py-3 px-8 rounded-full hover:bg-blue-700 transition duration-300 shadow-lg hover:shadow-xl transform hover:-translate-y-1"
-            >
-              Register Now
-            </Link>
-          </div>
-          <div className="md:w-1/2">
-            <Image
-              src="/hero-image.jpg"
-              alt="Future DigiTech Summit"
-              width={600}
-              height={400}
-              className="rounded-lg shadow-2xl"
-            />
-          </div>
-        </section>
+       
 
         {/* Organizer Section */}
-        <section className="py-16 border-t border-gray-200">
-          <h2 className="text-2xl font-semibold text-gray-800 mb-6 text-center">Organized by</h2>
-          <div className="flex justify-center items-center">
-            <Image
-              src="/tascon-group-logo.png"
-              alt="TASCON Group Logo"
-              width={200}
-              height={100}
-              className="h-20 w-auto"
-            />
-            <span className="ml-4 text-2xl font-bold text-gray-900">TASCON Group</span>
-          </div>
-        </section>
+        <section className="py-16 border-t border-gray-200 bg-gradient-to-b from-gray-50 to-white">
+  <div className="container mx-auto px-6 md:px-12 lg:px-20">
+    <h2 className="text-4xl font-extrabold text-blue-900 mb-10 text-center">
+      Organized by
+    </h2>
+    <div className="flex flex-col md:flex-row justify-center items-center space-y-6 md:space-y-0">
+      <Image
+        src={Tascon}
+        alt="TASCON Group Logo"
+        width={300}
+        height={150}
+        className="h-24 w-auto rounded-lg shadow-md transform hover:scale-105 transition-transform duration-300"
+      />
+      <div className="text-center md:text-left md:ml-6">
+        <span className="block text-3xl font-bold text-gray-900">TASCON Media</span>
+        <p className="text-lg text-gray-600 mt-3 max-w-md">
+        Elevate Your Business with TASCON
+        </p>
+      </div>
+    </div>
+  </div>
+</section>
+
 
         {/* About the Summit Section */}
-        <section className="py-16 border-t border-gray-200">
-          <h2 className="text-3xl font-bold text-blue-800 mb-8 text-center">About the Summit</h2>
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-12">
-            <div className="bg-white rounded-lg shadow-lg p-8">
-              <h3 className="text-2xl font-semibold text-teal-600 mb-4">Event Overview</h3>
-              <p className="text-gray-700 leading-relaxed">
-                Join us at the Future DigiTech Summit 2025, where industry leaders, innovators, and visionaries come
-                together to explore the latest trends and technologies shaping our digital future. This two-day event
-                promises insightful discussions, hands-on workshops, and unparalleled networking opportunities.
-              </p>
-            </div>
-            <div className="bg-white rounded-lg shadow-lg p-8">
-              <h3 className="text-2xl font-semibold text-teal-600 mb-4">Why Attend?</h3>
-              <ul className="space-y-3">
-                {[
-                  { icon: Users, text: "Network with industry leaders and innovators" },
-                  { icon: Zap, text: "Gain insights from world-class speakers and experts" },
-                  { icon: Globe, text: "Explore cutting-edge technologies and solutions" },
-                  { icon: TrendingUp, text: "Stay ahead in the evolving digital landscape" },
-                ].map((item, index) => (
-                  <li key={index} className="flex items-start">
-                    <item.icon className="text-purple-600 mr-3 mt-1 flex-shrink-0" />
-                    <span className="text-gray-700">{item.text}</span>
-                  </li>
-                ))}
-              </ul>
-            </div>
-          </div>
-        </section>
+        <section className="py-20 bg-gradient-to-b from-gray-50 to-white">
+  <div className="container mx-auto px-6 md:px-12 lg:px-20">
+    <h2 className="text-4xl font-extrabold text-blue-900 mb-12 text-center">
+      About the Summit
+    </h2>
+    <div className="grid grid-cols-1 md:grid-cols-2 gap-12">
+      {/* Event Overview Section */}
+      <div className="bg-white rounded-2xl shadow-lg p-8 hover:shadow-xl transition-shadow duration-300">
+        <h3 className="text-3xl font-semibold text-blue-700 mb-6">Event Overview</h3>
+        <p className="text-lg text-gray-700 leading-relaxed">
+          Join us at the Future DigiTech Summit 2025, where industry leaders, innovators, and visionaries come together
+          to explore the latest trends and technologies shaping our digital future. This two-day event promises
+          insightful discussions, hands-on workshops, and unparalleled networking opportunities.
+        </p>
+      </div>
+
+      {/* Why Attend Section */}
+      <div className="bg-white rounded-2xl shadow-lg p-8 hover:shadow-xl transition-shadow duration-300">
+        <h3 className="text-3xl font-semibold text-blue-700 mb-6">Why Attend?</h3>
+        <ul className="space-y-6">
+          {[
+            { icon: Users, text: "Network with industry leaders and innovators" },
+            { icon: Zap, text: "Gain insights from world-class speakers and experts" },
+            { icon: Globe, text: "Explore cutting-edge technologies and solutions" },
+            { icon: TrendingUp, text: "Stay ahead in the evolving digital landscape" },
+          ].map((item, index) => (
+            <li key={index} className="flex items-start">
+              <item.icon className="text-purple-600 mr-4 mt-1 w-6 h-6 flex-shrink-0" />
+              <span className="text-lg text-gray-700">{item.text}</span>
+            </li>
+          ))}
+        </ul>
+      </div>
+    </div>
+  </div>
+</section>
+
 
         {/* Call to Action Section */}
-        <section className="py-20 text-center bg-gray-100 rounded-lg mt-16">
-          <h2 className="text-3xl font-bold text-blue-800 mb-4">Ready to Shape the Future?</h2>
-          <p className="text-xl text-gray-700 mb-8 max-w-2xl mx-auto">
-            Don&apos;t miss this opportunity to be part of the most innovative tech summit of the year. Secure your spot now!
-          </p>
-          <Link
-            href="/register"
-            className="inline-block bg-purple-600 text-white text-xl font-semibold py-3 px-8 rounded-full hover:bg-purple-700 transition duration-300 shadow-lg hover:shadow-xl transform hover:-translate-y-1"
-          >
-            Register Now
-          </Link>
-        </section>
+        <section className="py-20 text-center bg-gradient-to-r from-blue-100 via-purple-50 to-purple-100 rounded-2xl shadow-xl mt-16 mx-auto max-w-5xl">
+  <div className="px-6 md:px-12 ">
+    <h2 className="text-5xl font-extrabold text-blue-900 mb-6">
+      Ready to Shape the Future?
+    </h2>
+    <p className="text-lg md:text-xl text-gray-700 mb-10 max-w-3xl mx-auto leading-relaxed">
+      Don&apos;t miss this opportunity to be part of the most innovative tech summit of the year. Secure your spot now and join the pioneers shaping tomorrow!
+    </p>
+    <Link
+      href="/register"
+      className="inline-block bg-gradient-to-r from-purple-600 to-blue-600 text-white text-lg md:text-xl font-medium py-3 px-10 rounded-full shadow-lg hover:bg-gradient-to-l hover:scale-105 transition-all duration-300 transform"
+    >
+      Register Now
+    </Link>
+  </div>
+</section>
+
       </div>
     </main>
-  )
+  );
 }
-

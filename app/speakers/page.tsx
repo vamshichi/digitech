@@ -2,7 +2,7 @@ import Link from "next/link"
 
 export default function SpeakersPage() {
   return (
-    <div className="min-h-screen bg-gray-50 flex flex-col items-center justify-center py-12 px-4 sm:px-6 lg:px-8">
+    <div className="min-h-screen bg-gradient-to-tr from-blue-400 to-purple-400 flex flex-col items-center justify-center py-12 px-4 sm:px-6 lg:px-8">
       <div className="max-w-md w-full space-y-8 text-center">
         <h1 className="text-4xl font-extrabold text-gray-900 sm:text-5xl sm:tracking-tight lg:text-6xl">Speakers</h1>
         <p className="mt-4 text-xl text-gray-500">To Be Announced</p>

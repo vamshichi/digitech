@@ -3,12 +3,20 @@ import { Facebook, Twitter, Linkedin, Instagram, Mail, Phone } from "lucide-reac
 
 const footerLinks = [
   { title: "About", href: "/about" },
+  { title: "Speakers", href: "/partners" },
+//   { title: "Schedule", href: "/schedule" },
   { title: "Speakers", href: "/speakers" },
-  { title: "Schedule", href: "/schedule" },
-  { title: "Sponsors", href: "/sponsors" },
-  { title: "Venue", href: "/venue" },
-  { title: "FAQ", href: "/faq" },
+  { title: "delegates", href: "/delegates" },
+  { title: "Contact", href: "/contact" },
 ]
+
+// { name: "Home", href: "/" },
+// { name: "About", href: "/about" },
+// { name: "Partners", href: "/partners" },
+// { name: "Speakers", href: "/speakers" },
+// { name: "Delegates", href: "/delegates" },
+// { name: "Contact", href: "/contact" },
+
 
 const socialLinks = [
   { icon: Facebook, href: "https://facebook.com/futuredigitech" },
@@ -61,13 +69,24 @@ export function Footer() {
                   href="mailto:info@futuredigitech.com"
                   className="text-blue-200 hover:text-white transition duration-150"
                 >
-                  info@futuredigitech.com
+                 info@tasconmedia.com
                 </a>
+                
+              </li>
+              <li className="flex items-center">
+                <Mail className="h-5 w-5 mr-2 text-blue-200" />
+                <a
+                  href="mailto:info@futuredigitech.com"
+                  className="text-blue-200 hover:text-white transition duration-150"
+                >
+                 tarannum.s@tasconmedia.com
+                </a>
+                
               </li>
               <li className="flex items-center">
                 <Phone className="h-5 w-5 mr-2 text-blue-200" />
                 <a href="tel:+60123456789" className="text-blue-200 hover:text-white transition duration-150">
-                  +60 12-345 6789
+                +91 9741744869
                 </a>
               </li>
             </ul>

@@ -43,9 +43,9 @@ export default function ContactPage() {
   }
 
   return (
-    <div className="min-h-screen bg-gray-50 py-12 px-4 sm:px-6 lg:px-8">
+    <div className="min-h-screen bg-gradient-to-r from-slate-300 to-slate-50 py-12 px-4 sm:px-6 lg:px-8 text-black">
       <div className="max-w-4xl mx-auto">
-        <h1 className="text-4xl font-bold text-center text-gray-900 mb-8">Contact Us</h1>
+        <h1 className="text-4xl font-extrabold text-center text-black mb-8">Contact Us</h1>
 
         <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
           <div>
@@ -190,11 +190,13 @@ export default function ContactPage() {
                   </div>
                   <div className="sm:col-span-1">
                     <dt className="text-sm font-medium text-gray-500">Phone</dt>
-                    <dd className="mt-1 text-sm text-gray-900">+60 3 1234 5678</dd>
+                    <dd className="mt-1 text-sm text-gray-900">+91 9741744869</dd>
                   </div>
                   <div className="sm:col-span-1">
                     <dt className="text-sm font-medium text-gray-500">Email</dt>
                     <dd className="mt-1 text-sm text-gray-900">info@futuredigitech.com</dd>
+                    <dd className="mt-1 text-sm text-gray-900">tarannum.s@tasconmedia.com</dd>
+
                   </div>
                   <div className="sm:col-span-2">
                     <dt className="text-sm font-medium text-gray-500">Address</dt>
