@@ -6,7 +6,7 @@ const footerLinks = [
   { title: "Speakers", href: "/partners" },
 //   { title: "Schedule", href: "/schedule" },
   { title: "Speakers", href: "/speakers" },
-  { title: "delegates", href: "/delegates" },
+  { title: "Delegates", href: "/delegates" },
   { title: "Contact", href: "/contact" },
   { title: "Privacy Policy", href: "/policy" },
 ]
