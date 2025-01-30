@@ -20,10 +20,10 @@ const footerLinks = [
 
 
 const socialLinks = [
-  { icon: Facebook, href: "https://facebook.com/futuredigitech" },
-  { icon: Twitter, href: "https://twitter.com/futuredigitech" },
-  { icon: Linkedin, href: "https://linkedin.com/company/futuredigitech" },
-  { icon: Instagram, href: "https://instagram.com/futuredigitech" },
+  { icon: Facebook, href: "https://www.facebook.com/tasconmedia/" },
+  { icon: Twitter, href: "https://x.com/tasconmedia" },
+  { icon: Linkedin, href:"https://www.linkedin.com/company/tascon-media/" },
+  { icon: Instagram, href:"https://www.instagram.com/tasconmedia/" },
 ]
 
 export function Footer() {
