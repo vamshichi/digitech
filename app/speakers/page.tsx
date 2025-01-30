@@ -1,11 +1,25 @@
 import Link from "next/link"
 import { Twitter, Linkedin, Facebook } from "lucide-react"
+import Image from "next/image"
+import mig1 from "@/public/images/speakers/Dr. Mohd Nor Azman - Ministry of Science, Technology an Innovation.jpeg"
+import img2 from "@/public/images/speakers/Ts. Ahmad Fauzi Masrom - LEMBAGA TABUNG ANGKATAN TENTERA.jpg"
+import img3 from "@/public/images/speakers/Rajesh Grover - Kanmo Group.jpg"
+import img4 from "@/public/images/speakers/James Thang.png"
+import img5 from "@/public/images/speakers/Angie Teh Sook Mei - Skynet Worldwide (M) Sdn Bhd.jpg"
+import img6 from "@/public/images/speakers/Heru Sutadi - Indonesian ICT Institute.jpg"
+// import img7 from "@/public/images/speakers/Ts. Ahmad Fauzi Masrom - LEMBAGA TABUNG ANGKATAN TENTERA.jpg"
+import img8 from "@/public/images/speakers/Aaron Lee - ANKH.jpg"
+import img9 from "@/public/images/speakers/Steve Lee - SP Group.jpg"
+import img10 from "@/public/images/speakers/Alex Ustaris - PHINMA Education.jpg"
+
+
+import type { StaticImageData } from "next/image"
 
 interface Speaker {
   name: string
   jobTitle: string
   organization: string
-  imageUrl: string
+  imageUrl: string | StaticImageData
   bio: string
   social: {
     twitter?: string
@@ -19,29 +33,23 @@ const speakers: Speaker[] = [
     name: "Dr. Mohd Nor Azman",
     jobTitle: "Deputy Secretary General(Technology Development)",
     organization: "Ministry of Science, Technology and Innovation (MOSTI)",
-    imageUrl: "/placeholder.svg?height=400&width=400",
+    imageUrl: mig1,
     bio: "Dr. Mohd Nor Azman is a visionary leader in technology development.",
-    social: {
-      twitter: "https://twitter.com",
-      linkedin: "https://linkedin.com",
-    },
+    social: {},
   },
   {
     name: "Ts. Ahmad Fauzi Masrom",
     jobTitle: "Vice President Information Technology",
     organization: "LEMBAGA TABUNG ANGKATAN TENTERA - Armed Forces Fund Board",
-    imageUrl: "/placeholder.svg?height=400&width=400",
+    imageUrl: img2,
     bio: "Ts. Ahmad Fauzi Masrom is an expert in military technology and fund management.",
-    social: {
-      linkedin: "https://linkedin.com",
-      facebook: "https://facebook.com",
-    },
+    social: {},
   },
   {
     name: "Rajesh Grover",
     jobTitle: "Group Vice President - AI, Digital & Omnichannel",
     organization: "Kanmo Group",
-    imageUrl: "/placeholder.svg?height=400&width=400",
+    imageUrl:  img3,
     bio: "Rajesh Grover leads AI, Digital & Omnichannel initiatives at Kanmo Group.",
     social: {},
   },
@@ -49,7 +57,7 @@ const speakers: Speaker[] = [
     name: "James Thang",
     jobTitle: "Group CIO",
     organization: "HELP University",
-    imageUrl: "/placeholder.svg?height=400&width=400",
+    imageUrl:  img4,
     bio: "James Thang is the Group CIO at HELP University.",
     social: {},
   },
@@ -57,7 +65,7 @@ const speakers: Speaker[] = [
     name: "Angie Teh Sook Mei",
     jobTitle: "Chief Information Officer",
     organization: "Skynet Worldwide (M) Sdn Bhd",
-    imageUrl: "/placeholder.svg?height=400&width=400",
+    imageUrl: img5,
     bio: "Angie Teh Sook Mei is the Chief Information Officer at Skynet Worldwide.",
     social: {},
   },
@@ -65,7 +73,7 @@ const speakers: Speaker[] = [
     name: "Heru Sutadi",
     jobTitle: "Executive Director",
     organization: "Indonesia ICT Institute",
-    imageUrl: "/placeholder.svg?height=400&width=400",
+    imageUrl:  img6,
     bio: "Heru Sutadi is an Executive Director at the Indonesia ICT Institute.",
     social: {},
   },
@@ -81,7 +89,7 @@ const speakers: Speaker[] = [
     name: "Aaron Lee",
     jobTitle: "Group CIO",
     organization: "ANKH Malaysia",
-    imageUrl: "/placeholder.svg?height=400&width=400",
+    imageUrl:  img8,
     bio: "Aaron Lee is the Group CIO at ANKH Malaysia.",
     social: {},
   },
@@ -89,7 +97,7 @@ const speakers: Speaker[] = [
     name: "Steve Lee",
     jobTitle: "Chief Information Officer & Chief Security Officer",
     organization: "SP Group",
-    imageUrl: "/placeholder.svg?height=400&width=400",
+    imageUrl:  img9,
     bio: "Steve Lee serves as the CIO and CSO at SP Group.",
     social: {},
   },
@@ -97,7 +105,7 @@ const speakers: Speaker[] = [
     name: "Alex Ustaris",
     jobTitle: "Chief Technology Officer",
     organization: "PHINMA Education",
-    imageUrl: "/placeholder.svg?height=400&width=400",
+    imageUrl:  img10,
     bio: "Alex Ustaris is the Chief Technology Officer at PHINMA Education.",
     social: {},
   },
@@ -105,12 +113,14 @@ const speakers: Speaker[] = [
 
 function SpeakerCard({ speaker }: { speaker: Speaker }) {
   return (
-    <div className="bg-white rounded-xl overflow-hidden shadow-lg transition-all duration-300 ease-in-out transform hover:scale-105 hover:shadow-2xl">
+    <div className="bg-blue-300  rounded-xl overflow-hidden shadow-lg transition-all duration-300 ease-in-out transform hover:scale-105 hover:shadow-2xl">
       <div className="relative">
-        <img
-          className="w-full h-64 object-cover object-center"
+        <Image
+          className="w-full h-60 object-cover object-center"
           src={speaker.imageUrl || "/placeholder.svg"}
           alt={speaker.name}
+          width={400}
+          height={400}
         />
         <div className="absolute inset-0 bg-black bg-opacity-50 flex items-center justify-center opacity-0 hover:opacity-100 transition-opacity duration-300">
           <div className="text-white text-center p-4">
@@ -154,9 +164,6 @@ function SpeakerCard({ speaker }: { speaker: Speaker }) {
         <h3 className="text-xl font-bold text-gray-900 mb-2">{speaker.name}</h3>
         <p className="text-sm font-medium text-blue-600 mb-1">{speaker.jobTitle}</p>
         <p className="text-sm text-gray-600 mb-4">{speaker.organization}</p>
-        <button className="w-full bg-blue-600 text-white py-2 px-4 rounded-md hover:bg-blue-700 transition-colors duration-300">
-          View Profile
-        </button>
       </div>
     </div>
   )
@@ -164,7 +171,7 @@ function SpeakerCard({ speaker }: { speaker: Speaker }) {
 
 export default function SpeakersPage() {
   return (
-    <div className="min-h-screen bg-gradient-to-br from-blue-100 to-indigo-200 py-16 px-4 sm:px-6 lg:px-8">
+    <div className="min-h-screen bg-gradient-to-tr from-blue-400 to-purple-400 py-16 px-4 sm:px-6 lg:px-8">
       <div className="max-w-7xl mx-auto">
         <h1 className="text-5xl font-extrabold text-center text-gray-900 sm:text-6xl sm:tracking-tight lg:text-7xl mb-16">
           Our Esteemed <span className="text-blue-600">Speakers</span>
