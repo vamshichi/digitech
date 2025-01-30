@@ -6,8 +6,9 @@ import img2 from "@/public/images/speakers/Ts. Ahmad Fauzi Masrom - LEMBAGA TABU
 import img3 from "@/public/images/speakers/Rajesh Grover - Kanmo Group.jpg"
 import img4 from "@/public/images/speakers/James Thang.png"
 import img5 from "@/public/images/speakers/Angie Teh Sook Mei - Skynet Worldwide (M) Sdn Bhd.jpg"
-import img6 from "@/public/images/speakers/Heru Sutadi - Indonesian ICT Institute.jpg"
-// import img7 from "@/public/images/speakers/Ts. Ahmad Fauzi Masrom - LEMBAGA TABUNG ANGKATAN TENTERA.jpg"
+// import img6 from "@/public/images/speakers/Heru Sutadi - Indonesian ICT Institute.jpg"
+import img6 from "@/public/images/speakers/WhatsApp Image 2025-01-30 at 6.03.22 PM.jpeg"
+import img7 from "@/public/images/speakers/WhatsApp Image 2025-01-30 at 6.04.49 PM.jpeg"
 import img8 from "@/public/images/speakers/Aaron Lee - ANKH.jpg"
 import img9 from "@/public/images/speakers/Steve Lee - SP Group.jpg"
 import img10 from "@/public/images/speakers/Alex Ustaris - PHINMA Education.jpg"
@@ -81,7 +82,7 @@ const speakers: Speaker[] = [
     name: "Mohd Hanapi Bisri",
     jobTitle: "Head of Group ICT",
     organization: "Petra Energy",
-    imageUrl: "/placeholder.svg?height=400&width=400",
+    imageUrl: img7,
     bio: "Mohd Hanapi Bisri heads Group ICT at Petra Energy.",
     social: {},
   },
@@ -116,7 +117,7 @@ function SpeakerCard({ speaker }: { speaker: Speaker }) {
     <div className="bg-blue-300  rounded-xl overflow-hidden shadow-lg transition-all duration-300 ease-in-out transform hover:scale-105 hover:shadow-2xl">
       <div className="relative">
         <Image
-          className="w-full h-60 object-cover object-center"
+          className="w-400 h-400 object-cover object-center"
           src={speaker.imageUrl || "/placeholder.svg"}
           alt={speaker.name}
           width={400}
