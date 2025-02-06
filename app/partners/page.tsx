@@ -1,5 +1,6 @@
 // import Link from "next/link"
 import PartnershipEnquiryForm from "@/app/partners/PartnershipEnquiryForm";
+import OurMediaPartners from "./mediaPartners";
 
 export default function PartnersPage() {
   return (
@@ -8,13 +9,16 @@ export default function PartnersPage() {
         <h1 className="text-4xl font-extrabold text-center text-gray-900 mb-12">
           Become Our Partner
         </h1>
-
-        <section className="mb-16">
+        
+         <section className="mb-16">
+        <OurMediaPartners />
+        </section>
+        {/* <section className="mb-16">
           <h2 className="text-3xl font-bold text-gray-800 mb-6">Our Partners</h2>
           <div className="bg-white shadow-lg rounded-xl p-8 flex items-center justify-center">
             <p className="text-xl text-gray-500 font-medium">To Be Announced</p>
           </div>
-        </section>
+        </section> */}
 
         <section className="mb-16">
           <h2 className="text-3xl font-bold text-gray-800 mb-6">Why Partner With Us?</h2>
