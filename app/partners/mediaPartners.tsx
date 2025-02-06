@@ -4,8 +4,8 @@ import volt from '@/public/images/partners/THE VOLT POST LOGO HIGH RES.jpg'
 import cio from '@/public/images/partners/The CIO World.png'
 
 const mediaPartners = [
-  { name: "THE VOLT POST", logo: volt, link: "https://www.bbc.com" },
-  { name: "The CIO World", logo: cio, link: "https://www.cnn.com" },
+  { name: "THE VOLT POST", logo: volt, link: "https://thevoltpost.com/" },
+  { name: "The CIO World", logo: cio, link: "https://thecioworldmedia.com/" },
 //   { name: "Forbes", logo: "/logos/forbes.png", link: "https://www.forbes.com" },
 //   { name: "TechCrunch", logo: "/logos/techcrunch.png", link: "https://techcrunch.com" },
 ];
