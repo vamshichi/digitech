@@ -12,7 +12,7 @@ const mediaPartners = [
 
 const OurMediaPartners = () => {
   return (
-    <div className="py-10 bg-gray-100">
+    <div className="py-10 text-black">
       <h2 className="text-3xl font-bold text-center mb-6">Our Media Partners</h2>
       <div className="grid grid-cols-2 md:grid-cols-4 gap-6 max-w-4xl mx-auto">
         {mediaPartners.map((partner) => (
@@ -21,7 +21,7 @@ const OurMediaPartners = () => {
             href={partner.link}
             target="_blank"
             rel="noopener noreferrer"
-            className="flex flex-col items-center p-4 bg-white rounded-lg shadow-md hover:shadow-lg transition"
+            className="flex flex-col items-center p-4 rounded-lg shadow-md hover:shadow-lg transition"
           >
             <Image
               src={partner.logo}
