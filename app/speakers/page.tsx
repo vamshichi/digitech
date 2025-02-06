@@ -12,6 +12,7 @@ import img7 from "@/public/images/speakers/WhatsApp Image 2025-01-30 at 6.04.49 
 import img8 from "@/public/images/speakers/Aaron Lee - ANKH.jpg"
 import img9 from "@/public/images/speakers/Steve Lee - SP Group.jpg"
 import img10 from "@/public/images/speakers/Alex Ustaris - PHINMA Education.jpg"
+import img11 from "@/public/images/speakers/Alex Tan - Yinson Holdings Berhad.png"
 
 
 import type { StaticImageData } from "next/image"
@@ -19,7 +20,7 @@ import type { StaticImageData } from "next/image"
 interface Speaker {
   name: string
   jobTitle: string
-  organization: string
+  organization?: string
   imageUrl: string | StaticImageData
   bio: string
   social: {
@@ -110,6 +111,14 @@ const speakers: Speaker[] = [
     bio: "Alex Ustaris is the Chief Technology Officer at PHINMA Education.",
     social: {},
   },
+  {
+    name: "Alex Tan",
+    jobTitle: "Chief Technology Officer",
+    // organization: "PHINMA Education",
+    imageUrl:  img11,
+    bio: " Yinson Holdings Berhad",
+    social: {},
+  }
 ]
 
 function SpeakerCard({ speaker }: { speaker: Speaker }) {
