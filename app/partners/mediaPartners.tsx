@@ -8,8 +8,8 @@ import Digital from '@/public/images/partners/Digital Now Asia.jpg'
 const mediaPartners = [
   { name: "THE VOLT POST", logo: volt, link: "https://thevoltpost.com/" },
   { name: "The CIO World", logo: cio, link: "https://thecioworldmedia.com/" },
-  { name: "Zex PR Wire", logo: Zex, link: "https://www.forbes.com" },
-  { name: "Digital Now Asia", logo: Digital, link: "https://techcrunch.com" },
+  { name: "Zex PR Wire", logo: Zex, link: "https://zexprwire.com/" },
+  { name: "Digital Now Asia", logo: Digital, link: "https://digitalnow.asia/" },
 ];
 
 const OurMediaPartners = () => {
