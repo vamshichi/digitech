@@ -113,10 +113,10 @@ const speakers: Speaker[] = [
   },
   {
     name: "Alex Tan",
-    jobTitle: "Chief Technology Officer",
-    // organization: "PHINMA Education",
+    jobTitle: "Group Chief Information Officer",
+    organization: "Yinson Holdings Berhad",
     imageUrl:  img11,
-    bio: " Yinson Holdings Berhad",
+    bio: " Alex Tan-Yinson Holdings Berhad",
     social: {},
   }
 ]
