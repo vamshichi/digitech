@@ -1,9 +1,9 @@
 import Image from "next/image";
 
-import volt from '@/public/images/partners/WhatsApp Image 2025-02-07 at 1.29.17 PM (2).jpeg'
-import cio from '@/public/images/partners/WhatsApp Image 2025-02-07 at 1.29.17 PM (3).jpeg'
-import Zex from '@/public/images/partners/WhatsApp Image 2025-02-07 at 1.29.17 PM.jpeg'
-import Digital from '@/public/images/partners/WhatsApp Image 2025-02-07 at 1.29.17 PM (1).jpeg'
+import volt from '@/public/images/partners/2.jpg'
+import cio from '@/public/images/partners/1.jpg'
+import Zex from '@/public/images/partners/Zex PR Wire.jpg'
+import Digital from '@/public/images/partners/Digital Now Asia.jpg'
 
 const mediaPartners = [
   { name: "THE VOLT POST", logo: volt, link: "https://thevoltpost.com/" },
@@ -15,7 +15,7 @@ const mediaPartners = [
 const OurMediaPartners = () => {
   return (
     <div className="py-10 text-black ">
-      <h2 className="text-3xl font-bold mb-16">Our Media Partners</h2>
+      <h2 className="text-3xl font-bold text-center mb-16">Our Media Partners</h2>
       <div className="grid grid-cols-2 md:grid-cols-4 gap-6 max-w-4xl mx-auto">
         {mediaPartners.map((partner) => (
           <a
@@ -23,13 +23,13 @@ const OurMediaPartners = () => {
             href={partner.link}
             target="_blank"
             rel="noopener noreferrer"
-            className="flex flex-col items-center p-4 rounded-lg  hover:shadow-lg transition"
+            className="flex flex-col items-center p-4 rounded-lg bg-white hover:shadow-lg transition"
           >
             <Image
               src={partner.logo}
               alt={partner.name}
-              width={100}
-              height={100}
+              width={200}
+              height={200}
               className="object-contain"
             />
             {/* <p className="mt-2 font-semibold">{partner.name}</p> */}

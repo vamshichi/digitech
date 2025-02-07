@@ -6,9 +6,9 @@ export default function PartnersPage() {
   return (
     <div className="min-h-screen bg-gradient-to-r from-blue-400 to-purple-400 py-12 px-6 sm:px-10 lg:px-16">
       <div className="max-w-7xl mx-auto">
-        <h1 className="text-4xl font-extrabold text-center text-gray-900 mb-12">
-          Become Our Partner
-        </h1>
+        {/* <h1 className="text-4xl font-extrabold text-center text-gray-900 mb-12">
+           Partners 
+        </h1> */}
         
          <section className="mb-16">
         <OurMediaPartners />
