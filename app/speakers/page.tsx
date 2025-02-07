@@ -11,7 +11,7 @@ import img6 from "@/public/images/speakers/WhatsApp Image 2025-01-30 at 6.03.22 
 import img7 from "@/public/images/speakers/WhatsApp Image 2025-01-30 at 6.04.49 PM.jpeg"
 import img8 from "@/public/images/speakers/Aaron Lee - ANKH.jpg"
 import img9 from "@/public/images/speakers/Steve Lee - SP Group.jpg"
-import img10 from "@/public/images/speakers/Alex Ustaris - PHINMA Education.jpg"
+import img10 from "@/public/images/speakers/400x400.jpg"
 import img11 from "@/public/images/speakers/Alex Tan - Yinson Holdings Berhad.png"
 
 

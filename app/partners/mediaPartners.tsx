@@ -1,9 +1,9 @@
 import Image from "next/image";
 
-import volt from '@/public/images/partners/THE VOLT POST LOGO HIGH RES.jpg'
-import cio from '@/public/images/partners/The CIO World.png'
-import Zex from '@/public/images/partners/Zex PR Wire.jpg'
-import Digital from '@/public/images/partners/Digital Now Asia.jpg'
+import volt from '@/public/images/partners/WhatsApp Image 2025-02-07 at 1.29.17 PM (2).jpeg'
+import cio from '@/public/images/partners/WhatsApp Image 2025-02-07 at 1.29.17 PM (3).jpeg'
+import Zex from '@/public/images/partners/WhatsApp Image 2025-02-07 at 1.29.17 PM.jpeg'
+import Digital from '@/public/images/partners/WhatsApp Image 2025-02-07 at 1.29.17 PM (1).jpeg'
 
 const mediaPartners = [
   { name: "THE VOLT POST", logo: volt, link: "https://thevoltpost.com/" },
@@ -28,8 +28,8 @@ const OurMediaPartners = () => {
             <Image
               src={partner.logo}
               alt={partner.name}
-              width={120}
-              height={60}
+              width={100}
+              height={100}
               className="object-contain"
             />
             {/* <p className="mt-2 font-semibold">{partner.name}</p> */}
