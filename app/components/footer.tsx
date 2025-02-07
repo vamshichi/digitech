@@ -3,7 +3,7 @@ import { Facebook, Twitter, Linkedin, Instagram, Mail, Phone } from "lucide-reac
 
 const footerLinks = [
   { title: "About", href: "/about" },
-  { title: "Speakers", href: "/partners" },
+  { title: "Partners", href: "/partners" },
 //   { title: "Schedule", href: "/schedule" },
   { title: "Speakers", href: "/speakers" },
   { title: "Delegates", href: "/delegates" },
