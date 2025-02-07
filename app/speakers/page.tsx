@@ -13,6 +13,7 @@ import img8 from "@/public/images/speakers/Aaron Lee - ANKH.jpg"
 import img9 from "@/public/images/speakers/Steve Lee - SP Group.jpg"
 import img10 from "@/public/images/speakers/400x400.jpg"
 import img11 from "@/public/images/speakers/Alex Tan - Yinson Holdings Berhad.png"
+import img12 from '@/public/images/speakers/WhatsApp Image 2025-02-07 at 3.12.22 PM.jpeg'
 
 
 import type { StaticImageData } from "next/image"
@@ -117,6 +118,14 @@ const speakers: Speaker[] = [
     organization: "Yinson Holdings Berhad",
     imageUrl:  img11,
     bio: " Alex Tan-Yinson Holdings Berhad",
+    social: {},
+  },
+  {
+    name: "Prof Datin Lorela Chia",
+    jobTitle: "President",
+    organization: "Malaysia Association of Sustainable Supply Chain & Innovation(MASSCI)",
+    imageUrl:  img12,
+    bio: "Prof Datin Lorela Chia-Malaysia Association of Sustainable Supply Chain & Innovation(MASSCI)",
     social: {},
   }
 ]
