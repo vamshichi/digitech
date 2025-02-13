@@ -10,7 +10,7 @@ export default function BrochureRequestPage() {
   const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault()
     setError("")
-    
+
     try {
       const response = await fetch("/api/breg", {
         method: "POST",
@@ -19,17 +19,21 @@ export default function BrochureRequestPage() {
         },
         body: JSON.stringify({ email }),
       })
-      
+
       if (!response.ok) {
         throw new Error("Failed to request brochure")
       }
-      
+
       setSubmitted(true)
-    } catch (err: any) {
-      console.error("Error requesting brochure:", err);
-      setError("Something went wrong. Please try again later.");
+    } catch (err: unknown) {
+      if (err instanceof Error) {
+        console.error("Error requesting brochure:", err.message)
+        setError(err.message)
+      } else {
+        console.error("Unknown error:", err)
+        setError("Something went wrong. Please try again later.")
+      }
     }
-    
   }
 
   if (submitted) {
