@@ -1,43 +1,40 @@
-import nodemailer from "nodemailer";
-import type { NextApiRequest, NextApiResponse } from "next";
+import { NextResponse } from "next/server"
+import nodemailer from "nodemailer"
 
-export default async function handler(req: NextApiRequest, res: NextApiResponse) {
-  if (req.method !== "POST") {
-    return res.status(405).json({ message: "Method Not Allowed" });
-  }
-
-  const { email } = req.body;
-
-  if (!email) {
-    return res.status(400).json({ message: "Email is required" });
-  }
-
-  const transporter = nodemailer.createTransport({
-    service: "gmail",
-    auth: {
-      user: "chvamshi03@gmail.com",
-      pass: 'zfie hmte iyxt wyto',
-    },
-  });
-
-  const mailOptions = {
-    from: "chvamshi03@gmail.com",
-    to: "digital.maxpo@gmail.com, tarannum.s@tasconmedia.com",
-    subject: "New Brochure Request",
-    text: `A new brochure request was made by: ${email}`,
-    // attachments: [
-    //   {
-    //     filename: "brochure.pdf",
-    //     path: "./public/brochure.pdf", // Ensure the file exists in this path
-    //   },
-    // ],
-  };
-
+export async function POST(req: Request) {
   try {
-    await transporter.sendMail(mailOptions);
-    res.status(200).json({ message: "Brochure request sent successfully" });
+    const { email } = await req.json()
+
+    if (!email || typeof email !== "string") {
+      return NextResponse.json({ error: "Invalid email" }, { status: 400 })
+    }
+
+    const transporter = nodemailer.createTransport({
+      service: "gmail",
+      auth: {
+        user: "chvamshi03@gmail.com",
+        pass: "zfie hmte iyxt wyto", // ⚠️ Don't expose credentials! Use environment variables instead.
+      },
+    })
+
+    const mailOptions = {
+      from: "chvamshi03@gmail.com",
+      to: "digital.maxpo@gmail.com, tarannum.s@tasconmedia.com",
+      subject: "New Brochure Request",
+      text: `A new brochure request was made by: ${email}`,
+      // attachments: [
+      //   {
+      //     filename: "brochure.pdf",
+      //     path: "./public/brochure.pdf", // Ensure the file exists in this path
+      //   },
+      // ],
+    }
+
+    await transporter.sendMail(mailOptions)
+
+    return NextResponse.json({ message: "Brochure request sent successfully" }, { status: 200 })
   } catch (error) {
-    console.error("Error sending email:", error);
-    res.status(500).json({ message: "Error sending brochure request" });
+    console.error("Error sending email:", error)
+    return NextResponse.json({ error: "Error sending brochure request" }, { status: 500 })
   }
 }
