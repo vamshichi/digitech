@@ -5,12 +5,29 @@ import { useState } from "react"
 export default function BrochureRequestPage() {
   const [email, setEmail] = useState("")
   const [submitted, setSubmitted] = useState(false)
+  const [error, setError] = useState("")
 
   const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault()
-    // Here you would typically send the email to your server or a third-party service
-    console.log("Brochure requested for:", email)
-    setSubmitted(true)
+    setError("")
+    
+    try {
+      const response = await fetch("/api/breg", {
+        method: "POST",
+        headers: {
+          "Content-Type": "application/json",
+        },
+        body: JSON.stringify({ email }),
+      })
+      
+      if (!response.ok) {
+        throw new Error("Failed to request brochure")
+      }
+      
+      setSubmitted(true)
+    } catch (err) {
+      setError("Something went wrong. Please try again later.")
+    }
   }
 
   if (submitted) {
@@ -58,6 +75,8 @@ export default function BrochureRequestPage() {
               </div>
             </div>
 
+            {error && <p className="text-red-500 text-sm">{error}</p>}
+
             <div>
               <button
                 type="submit"
@@ -72,4 +91,3 @@ export default function BrochureRequestPage() {
     </div>
   )
 }
-
