@@ -25,9 +25,11 @@ export default function BrochureRequestPage() {
       }
       
       setSubmitted(true)
-    } catch (err:any) {
-      setError("Something went wrong. Please try again later.")
+    } catch (err: any) {
+      console.error("Error requesting brochure:", err);
+      setError("Something went wrong. Please try again later.");
     }
+    
   }
 
   if (submitted) {
