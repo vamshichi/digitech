@@ -25,7 +25,7 @@ export default function BrochureRequestPage() {
       }
       
       setSubmitted(true)
-    } catch (err) {
+    } catch (err:any) {
       setError("Something went wrong. Please try again later.")
     }
   }
