@@ -1,6 +1,6 @@
-"use client"
+"use client";
 
-import { useState } from "react"
+import { useState } from "react";
 
 export default function PartnershipEnquiryForm() {
   const [formData, setFormData] = useState({
@@ -8,20 +8,36 @@ export default function PartnershipEnquiryForm() {
     email: "",
     company: "",
     message: "",
-  })
-  const [submitted, setSubmitted] = useState(false)
+  });
+  const [submitted, setSubmitted] = useState(false);
 
   const handleChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>) => {
-    const { name, value } = e.target
-    setFormData((prevState) => ({ ...prevState, [name]: value }))
-  }
+    const { name, value } = e.target;
+    setFormData((prevState) => ({ ...prevState, [name]: value }));
+  };
 
-  const handleSubmit = async (e: React.FormEvent) => {
-    e.preventDefault()
-    // Here you would typically send the form data to your server or a third-party service
-    console.log("Partnership enquiry submitted:", formData)
-    setSubmitted(true)
-  }
+  const handleSubmit = async (e: React.FormEvent<HTMLFormElement>) => {
+    e.preventDefault();
+
+    try {
+      const response = await fetch("/api/partners", {
+        method: "POST",
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify(formData),
+      });
+
+      const data = await response.json();
+
+      if (data.success) {
+        setSubmitted(true);
+      } else {
+        alert("Failed to send the enquiry. Please try again later.");
+      }
+    } catch (error) {
+      console.error("Error submitting form:", error);
+      alert("Something went wrong. Please try again later.");
+    }
+  };
 
   if (submitted) {
     return (
@@ -31,7 +47,7 @@ export default function PartnershipEnquiryForm() {
           We&apos;ve received your partnership enquiry and will get back to you soon.
         </p>
       </div>
-    )
+    );
   }
 
   return (
@@ -103,6 +119,5 @@ export default function PartnershipEnquiryForm() {
         </div>
       </form>
     </div>
-  )
+  );
 }
-
