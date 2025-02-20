@@ -141,7 +141,7 @@ const AwardForm: React.FC = () => {
             rows={4}
           />
 
-          {/* Terms & Conditions Field */}
+          {/* Terms & Conditions Fields */}
           <div className="mt-4 flex items-center">
             <input
               id="acceptedTerms"
