@@ -50,7 +50,7 @@ export function HeroSection() {
             <div className="relative w-4/5 max-w-lg">
               <Image
                 src={backgroundImage || "/placeholder.svg"}
-                alt="Future DigiTech Summit"
+                alt="Future DigiTech Summit 2025"
                 width={800}
                 height={600}
                  className="rounded-lg shadow-2xl transform hover:scale-105 transition-transform duration-300"
