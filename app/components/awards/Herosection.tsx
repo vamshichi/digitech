@@ -2,7 +2,7 @@ import Image from "next/image"
 import Link from "next/link"
 import { CalendarDays, MapPin } from "lucide-react"
 import backgroundImage from "@/public/images/bg.jpg"
-import awardImage from "@/public/images/awards/trophy.png"
+// import awardImage from "@/public/images/awards/trophy.png"
 
 export function HeroSection() {
   return (
