@@ -14,6 +14,13 @@ import img9 from "@/public/images/speakers/Steve Lee - SP Group.jpg"
 import img10 from "@/public/images/speakers/400x400.jpg"
 import img11 from "@/public/images/speakers/Alex Tan - Yinson Holdings Berhad.png"
 import img12 from '@/public/images/speakers/WhatsApp Image 2025-02-07 at 3.37.49 PM.jpeg'
+import img13 from '@/public/images/speakers/G Saravana-Thompson.jpg'
+import img14 from '@/public/images/speakers/John Affendi.jpg'
+import img15 from '@/public/images/speakers/S K Joo.jpg'
+import img16 from '@/public/images/speakers/Ts.Izzat.jpg'
+import img17 from '@/public/images/speakers/Ts Tengku.jpg'
+import img18 from '@/public/images/speakers/Farouk Abdullah.jpg'
+
 
 
 import type { StaticImageData } from "next/image"
@@ -126,6 +133,55 @@ const speakers: Speaker[] = [
     organization: "Malaysia Association of Sustainable Supply Chain & Innovation(MASSCI)",
     imageUrl:  img12,
     bio: "Prof Datin Lorela Chia-Malaysia Association of Sustainable Supply Chain & Innovation(MASSCI)",
+    social: {},
+  },
+  {
+    name: "G Saravanan",
+    jobTitle: "Group Chief Information Officer",
+    organization: "Thomson Hospital",
+    imageUrl:  img13,
+    bio: " ",
+    social: {},
+  },
+  {
+    name: " Johan Affendi",
+    jobTitle: " Head of Business Technology",
+    organization: "Enterprise Business Division,CelcomDigi",
+    imageUrl:  img14,
+    bio: "",
+    social: {},
+  },
+  {
+    name: "SK Joo",
+    jobTitle: " CTO",
+    organization: "Senheng Electric (KL) Sdn Bhd  ",
+    imageUrl:  img15,
+    bio: " ",
+    social: {},
+  },
+  {
+    name: "   Ts. Izzat Aziz",
+    jobTitle: "Chief Technology Officer",
+    organization: "Permodalan Nasional Berhad",
+    imageUrl:  img16,
+    bio: " ",
+    social: {},
+  },
+  {
+    name: "  Ts. Tengku Azrul Tengku Azhar",
+    jobTitle: "Director",
+    organization: "Digital Regulatory & Sustainability",
+    imageUrl:  img17,
+    bio: " ",
+    social: {},
+  },
+ 
+  {
+    name: "  Farouk Abdullah",
+    jobTitle: " Chief Digital Officer",
+    organization: "KHIND Malaysia",
+    imageUrl:  img18,
+    bio: "",
     social: {},
   }
 ]
