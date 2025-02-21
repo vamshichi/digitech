@@ -21,10 +21,21 @@ export function HeroSection() {
         <div className="w-full flex flex-col md:flex-row items-center">
           {/* Text Section */}
           <div className="md:w-1/2 text-center md:text-left text-white space-y-6">
-            <h1 className="text-5xl md:text-6xl lg:text-7xl font-extrabold leading-tight">
-              {/* Future DigiTech Summit 2025 */}
-              Future DigiTech Summit & Awards 2025
+            {/* <h1 className="text-5xl md:text-6xl lg:text-7xl font-extrabold leading-tight">
+              
+              Future DigiTech Summit
+            </h1> */}  
+             <h1 className="text-5xl md:text-6xl lg:text-7xl font-extrabold leading-tight">
+              <span className="text-2xl md:text-3xl lg:text-4xl">
+                Future DigiTech Summit &amp;
+              </span>
+              <br />
+              Awards
+              <br />
+              <span className="text-2xl md:text-3xl lg:text-4xl">2025</span>
             </h1>
+
+
             <p className="text-lg md:text-xl lg:text-2xl font-light leading-relaxed max-w-lg mx-auto md:mx-0">
               Empowering Innovation & Transforming the Digital Frontier.
             </p>
@@ -38,12 +49,12 @@ export function HeroSection() {
                 <span className="text-white font-medium">Malaysia</span>
               </div>
             </div>
-            <Link
+            {/* <Link
               href="/contact"
               className="inline-block bg-gradient-to-r from-pink-500 to-yellow-500 text-white text-lg font-semibold py-3 px-12 rounded-full shadow-lg transform hover:scale-105 transition-all duration-300"
             >
               Register Now
-            </Link>
+            </Link> */}
           </div>
 
           {/* Image Section */}
