@@ -21,7 +21,7 @@ export function HeroSection() {
           {/* Text Section */}
           <div className="md:w-1/2 text-center md:text-left text-white space-y-6">
             <h1 className="text-5xl md:text-6xl lg:text-7xl font-extrabold leading-tight">
-              {/* Future DigiTech Summit 2025 */}
+              {/* Future DigiTech Summit 2025.... */}
               Future DigiTech Summit & Awards 2025
             </h1>
             <p className="text-lg md:text-xl lg:text-2xl font-light leading-relaxed max-w-lg mx-auto md:mx-0">
