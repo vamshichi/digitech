@@ -1,5 +1,5 @@
 import Image from "next/image"
-import Link from "next/link"
+// import Link from "next/link"
 import { CalendarDays, MapPin } from "lucide-react"
 import backgroundImage from "@/public/images/bg.jpg"
 // import awardImage from "@/public/images/awards/trophy.png"
@@ -23,7 +23,7 @@ export function HeroSection() {
           <div className="md:w-1/2 text-center md:text-left text-white space-y-6">
             {/* <h1 className="text-5xl md:text-6xl lg:text-7xl font-extrabold leading-tight">
               
-              Future DigiTech Summit
+              Future DigiTech Summit 2025
             </h1> */}  
              <h1 className="text-5xl md:text-6xl lg:text-7xl font-extrabold leading-tight">
               <span className="text-2xl md:text-3xl lg:text-4xl">
