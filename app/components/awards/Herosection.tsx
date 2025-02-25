@@ -1,44 +1,46 @@
-import Image from "next/image"
+// import Image from "next/image"
 // import Link from "next/link"
 import { CalendarDays, MapPin } from "lucide-react"
-import backgroundImage from "@/public/images/bg.jpg"
+// import backgroundImage from "@/public/images/bg.jpg"
 // import awardImage from "@/public/images/awards/trophy.png"
 
 export function HeroSection() {
   return (
     <section className="relative h-screen overflow-hidden">
-      <Image
-        src={backgroundImage || "/placeholder.svg"}
-        alt="Future DigiTech Summit Background"
-        layout="fill"
-        objectFit="cover"
-        quality={100}
-        priority
-      />
-      <div className="absolute inset-0 bg-gradient-to-br from-blue-950/80 via-purple-800/80 to-indigo-900/80"></div>
+      {/* Video Background */}
+      <video
+        className="absolute top-0 left-0 w-full h-full object-cover"
+        autoPlay
+        loop
+        muted
+        playsInline
+      >
+        <source src="/videos/background.mp4" type="video/mp4" />
+        Your browser does not support the video tag.
+      </video>
 
-      <div className="relative z-10 h-full container mx-auto px-6 md:px-12 lg:px-20 flex items-center">
+      <div className="relative z-10 h-full container mx-auto px-6 md:px-12 lg:px-20 flex items-start pt-16">
         <div className="w-full flex flex-col md:flex-row items-center">
           {/* Text Section */}
           <div className="md:w-1/2 text-center md:text-left text-white space-y-6">
-            {/* <h1 className="text-5xl md:text-6xl lg:text-7xl font-extrabold leading-tight">
-              
-              Future DigiTech Summit 2025
-            </h1> */}  
-             <h1 className="text-5xl md:text-6xl lg:text-7xl font-extrabold leading-tight">
-              <span className="text-2xl md:text-3xl lg:text-4xl">
-                Future DigiTech Summit &amp;
-              </span>
-              <br />
-              Awards
-              <br />
-              <span className="text-2xl md:text-3xl lg:text-4xl">2025</span>
-            </h1>
-
-
-            <p className="text-lg md:text-xl lg:text-2xl font-light leading-relaxed max-w-lg mx-auto md:mx-0">
-              Empowering Innovation & Transforming the Digital Frontier.
+            <div className="py-8">
+              <h1 className="whitespace-nowrap text-3xl md:text-4xl lg:text-5xl font-extrabold leading-tight">
+                Future DigiTech Summit
+              </h1>
+              <div className="whitespace-nowrap text-3xl md:text-4xl lg:text-5xl font-extrabold leading-tight mt-4 mb-4">
+                &amp; Tech Visionary
+              </div>
+              <h1 className="whitespace-nowrap text-3xl md:text-4xl lg:text-5xl font-extrabold leading-tight mb-0">
+                Awards 2025
+              </h1>
+              <p className="whitespace-nowrap text-base md:text-lg lg:text-xl font-light leading-relaxed max-w-full mt-4">
+              Empowering Innovation &amp; Transforming the Digital Frontier.
             </p>
+            </div>
+            {/* Tagline moved upward with negative margin */}
+            {/* <p className="whitespace-nowrap text-base md:text-lg lg:text-xl font-light leading-relaxed max-w-full -mt-2">
+              Empowering Innovation &amp; Transforming the Digital Frontier.
+            </p> */}
             <div className="flex flex-wrap justify-center md:justify-start gap-4">
               <div className="flex items-center bg-white bg-opacity-20 backdrop-blur-sm rounded-lg px-6 py-3 shadow-md">
                 <CalendarDays className="text-white mr-3" />
@@ -49,26 +51,11 @@ export function HeroSection() {
                 <span className="text-white font-medium">Malaysia</span>
               </div>
             </div>
-            {/* <Link
-              href="/contact"
-              className="inline-block bg-gradient-to-r from-pink-500 to-yellow-500 text-white text-lg font-semibold py-3 px-12 rounded-full shadow-lg transform hover:scale-105 transition-all duration-300"
-            >
-              Register Now
-            </Link> */}
           </div>
 
-          {/* Image Section */}
-         <div className="md:w-1/2 mt-12 md:mt-0 flex justify-center">
+          {/* Optional Image/Content Section */}
+          <div className="md:w-1/2 mt-12 md:mt-0 flex justify-center">
             <div className="relative w-4/5 max-w-lg">
-              {/* <Image
-                src={awardImage || "/placeholder.svg"}
-                alt="Future DigiTech Summit"
-                width={800}
-                height={600}
-                 className="rounded-lg shadow-2xl transform hover:scale-105 transition-transform duration-300"
-              /> */}
-
-
               <div className="absolute inset-0 bg-gradient-to-tr from-blue-900 to-purple-600 opacity-30 rounded-lg"></div>
             </div>
           </div>
@@ -77,4 +64,3 @@ export function HeroSection() {
     </section>
   )
 }
-
