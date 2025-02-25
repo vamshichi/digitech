@@ -1,4 +1,4 @@
-import Image from "next/image"
+// import Image from "next/image"
 // import Link from "next/link"
 import { CalendarDays, MapPin } from "lucide-react"
 // import backgroundImage from "@/public/images/bg.jpg"
