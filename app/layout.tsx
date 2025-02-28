@@ -17,7 +17,7 @@ const geistMono = Geist_Mono({
 
 export const metadata: Metadata = {
   title: "Future DigiTech Summit 2025",
-  description: "Empowering Innovation & Transforming the Digital Frontier",
+  description: "Empowering Innovation & Transforming the Digital Frontier.",
 };
 
 export default function RootLayout({
