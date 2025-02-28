@@ -47,7 +47,7 @@ const Page: React.FC = () => {
             excellence. This prestigious event recognizes transformative
             solutions and forward-thinking leadership that drive digital
             advancements across industries. Join us as we spotlight the
-            champions of the tech revolution
+            champions of the tech revolution!
           </p>
         </section>
 
