@@ -4,6 +4,7 @@ import Link from "next/link";
 import { Users, Zap, Globe, TrendingUp } from "lucide-react";
 import Tascon from '@/public/images/icon.png';
 import { HeroSection } from "./components/Herosection";
+import UpcomingEvents from "@/app/components/upcomingEvents/UpcomingEvents";
 
 export default function Home() {
   const structuredData = {
@@ -48,6 +49,10 @@ export default function Home() {
 
       {/* Hero Section */}
       <HeroSection />
+
+      <UpcomingEvents />
+
+
 
       {/* Organizer Section */}
       <section className="py-16 border-t border-gray-200 bg-gradient-to-b from-gray-50 to-white">
