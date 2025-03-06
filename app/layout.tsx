@@ -1,6 +1,6 @@
 import type { Metadata } from "next";
 import { Geist, Geist_Mono } from "next/font/google";
-import Script from "next/script"; 
+import Script from "next/script";
 import "./globals.css";
 import { Navbar } from "./components/Navbar";
 import { Footer } from "./components/footer";
@@ -16,8 +16,9 @@ const geistMono = Geist_Mono({
 });
 
 export const metadata: Metadata = {
-  title: "Future DigiTech Summit & Awards 2025 | Transforming the Digital Frontier",
-  description: "Digitech & Tech Visionary Awards brings global tech leaders to explore AI, Web3, blockchain & FinTech as Malaysia shapes the future on May 28-29, 2025",
+  title: "Future DigiTech Summit & Tech Visionary Awards 2025",
+  description:
+    "Digitech & Tech Visionary Awards brings global tech leaders to explore AI, Web3, blockchain & FinTech as Malaysia shapes the future on May 28-29, 2025",
 };
 
 export default function RootLayout({
@@ -28,38 +29,43 @@ export default function RootLayout({
   return (
     <html lang="en">
       <head>
-        {/* Favicon */}
+        {/* Favicons and App Icons */}
         <link rel="icon" href="/favicon.ico" sizes="any" />
-        <link rel="icon" type="image/png" href="/favicon-32x32.png" sizes="32x32" />
-        <link rel="icon" type="image/png" href="/favicon-16x16.png" sizes="16x16" />
+        <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png" />
+        <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png" />
+        <link rel="apple-touch-icon" href="/apple-touch-icon.png" />
+        <link rel="icon" type="image/png" sizes="192x192" href="/android-chrome-192x192.png" />
+        <link rel="icon" type="image/png" sizes="512x512" href="/android-chrome-512x512.png" />
         <meta name="theme-color" content="#ffffff" />
 
         {/* Canonical URL */}
         <link rel="canonical" href="https://www.futuredigitechsummit.com/" />
 
-        {/* Open Graph Meta Tags (for social media sharing) */}
-        <meta property="og:title" content="Future DigiTech Summit & Awards 2025 | Transforming the Digital Frontier" />
+        {/* Open Graph Meta Tags (for Social Media) */}
+        <meta property="og:title" content="Future DigiTech Summit & Tech Visionary Awards 2025" />
         <meta property="og:description" content="Digitech & Tech Visionary Awards brings global tech leaders to explore AI, Web3, blockchain & FinTech as Malaysia shapes the future on May 28-29, 2025" />
-        <meta property="og:image" content="https://www.futuredigitechsummit.com/og-image.jpg" />
+        <meta property="og:image" content="https://www.futuredigitechsummit.com/android-chrome-512x512.png" />
+        <meta property="og:image:width" content="512" />
+        <meta property="og:image:height" content="512" />
         <meta property="og:url" content="https://www.futuredigitechsummit.com/" />
         <meta property="og:type" content="website" />
 
         {/* Twitter Meta Tags */}
         <meta name="twitter:card" content="summary_large_image" />
-        <meta name="twitter:title" content="Future DigiTech Summit & Awards 2025 | Transforming the Digital Frontier" />
+        <meta name="twitter:title" content="Future DigiTech Summit & Awards 2025" />
         <meta name="twitter:description" content="Digitech & Tech Visionary Awards brings global tech leaders to explore AI, Web3, blockchain & FinTech as Malaysia shapes the future on May 28-29, 2025" />
-        <meta name="twitter:image" content="https://x.com/tasconmedia?t=hqT3WIcQQxf2dGlRNFPrng&s=08" />
+        <meta name="twitter:image" content="https://www.futuredigitechsummit.com/android-chrome-512x512.png" />
 
-
-        {/* Open Graph Meta Tags for Instagram */}
-<meta property="og:title" content="Future DigiTech Summit & Awards 2025 | Transforming the Digital Frontier" />
-<meta property="og:description" content="Digitech & Tech Visionary Awards brings global tech leaders to explore AI, Web3, blockchain & FinTech as Malaysia shapes the future on May 28-29, 2025" />
-<meta property="og:image" content="https://www.instagram.com/tasconmedia/" />
-<meta property="og:image:width" content="1200" />
-<meta property="og:image:height" content="630" />
-<meta property="og:url" content="https://www.instagram.com/tasconmedia/" />
-<meta property="og:type" content="website" />
-
+        {/* Structured Data (SEO) */}
+        <script type="application/ld+json">
+          {JSON.stringify({
+            "@context": "https://schema.org",
+            "@type": "Organization",
+            name: "Future DigiTech Summit",
+            url: "https://www.futuredigitechsummit.com/",
+            logo: "https://www.futuredigitechsummit.com/android-chrome-512x512.png",
+          })}
+        </script>
       </head>
       <body className={`${geistSans.variable} ${geistMono.variable} antialiased`}>
         <Navbar />
