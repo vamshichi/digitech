@@ -1,6 +1,5 @@
 import Image from "next/image"
 import Link from "next/link"
-import { CalendarDays, MapPin } from "lucide-react"
 import backgroundImage from "@/public/images/bg.jpg"
 
 export function HeroSection() {
@@ -27,7 +26,7 @@ export function HeroSection() {
             <p className="text-lg md:text-xl lg:text-2xl font-light leading-relaxed max-w-lg mx-auto md:mx-0">
               Empowering Innovation & Transforming the Digital Frontier.
             </p>
-            <div className="flex flex-wrap justify-center md:justify-start gap-4">
+            {/* <div className="flex flex-wrap justify-center md:justify-start gap-4">
               <div className="flex items-center bg-white bg-opacity-20 backdrop-blur-sm rounded-lg px-6 py-3 shadow-md">
                 <CalendarDays className="text-white mr-3" />
                 <span className="text-white font-medium">28–29 May 2025</span>
@@ -36,7 +35,7 @@ export function HeroSection() {
                 <MapPin className="text-white mr-3" />
                 <span className="text-white font-medium">Malaysia</span>
               </div>
-            </div>
+            </div> */}
             <Link
               href="/contact"
               className="inline-block bg-gradient-to-r from-pink-500 to-yellow-500 text-white text-lg font-semibold py-3 px-12 rounded-full shadow-lg transform hover:scale-105 transition-all duration-300"
