@@ -29,7 +29,7 @@ export default function RootLayout({
   return (
     <html lang="en">
       <head>
-        {/* Favicons and App Icons */}
+        {/* Favicons and App Icons  */}
         <link rel="icon" href="/favicon.ico" sizes="any" />
         <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png" />
         <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png" />
@@ -38,7 +38,7 @@ export default function RootLayout({
         <link rel="icon" type="image/png" sizes="512x512" href="/android-chrome-512x512.png" />
         <meta name="theme-color" content="#ffffff" />
 
-        {/* Canonical URL */}
+        {/* Canonical URL for digitech*/}
         <link rel="canonical" href="https://www.futuredigitechsummit.com/" />
 
         {/* Open Graph Meta Tags (for Social Media) */}
