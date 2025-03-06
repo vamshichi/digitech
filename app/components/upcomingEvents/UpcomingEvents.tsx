@@ -52,7 +52,7 @@ const upcomingEvents: Event[] = [
 ];
 
 export default function UpcomingEvents() {
-  // Filter events to only include those with the specific name ...
+  // Filter events to only include those with the specific name ......
   const filteredEvents = upcomingEvents.filter(
     (event) =>
       event.name === "Future DigiTech Summit & Tech Visionary Awards 2025"
