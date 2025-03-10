@@ -1,6 +1,7 @@
 // import Link from "next/link"
 import PartnershipEnquiryForm from "@/app/partners/PartnershipEnquiryForm";
 import OurMediaPartners from "./mediaPartners";
+import AssociationPartners from "./associationPartners";
 
 export default function PartnersPage() {
   return (
@@ -11,6 +12,10 @@ export default function PartnersPage() {
         </h1> */}
         
          <section className="mb-16">
+
+         <AssociationPartners />
+
+
         <OurMediaPartners />
         </section>
         {/* <section className="mb-16">

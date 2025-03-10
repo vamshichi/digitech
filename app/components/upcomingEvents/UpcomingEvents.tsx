@@ -61,14 +61,14 @@ export default function UpcomingEvents() {
   return (
     <div className="min-h-screen bg-gradient-to-b from-sky-50 to-white">
       <div className="container mx-auto px-4 py-16">
-        <motion.h1
+        <motion.h2
           className="text-5xl font-bold text-gray-800 mb-8 text-center"
           initial={{ opacity: 0, y: -20 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.8 }}
         >
           Upcoming Events
-        </motion.h1>
+        </motion.h2>
 
         <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
           {filteredEvents.map((event, index) => (
