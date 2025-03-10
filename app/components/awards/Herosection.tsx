@@ -25,22 +25,15 @@ export function HeroSection() {
           <div className="md:w-1/2 text-center md:text-left text-white space-y-6">
             <div className="py-8">
               <h1 className="whitespace-nowrap text-3xl md:text-4xl lg:text-5xl font-extrabold leading-tight">
-                Future DigiTech Summit
-              </h1>
-              <div className="whitespace-nowrap text-3xl md:text-4xl lg:text-5xl font-extrabold leading-tight mt-4 mb-4">
-                &amp; Tech Visionary
-              </div>
-              <h1 className="whitespace-nowrap text-3xl md:text-4xl lg:text-5xl font-extrabold leading-tight mb-0">
+                Future DigiTech Summit <br />
+                <span className="mt-4 mb-4 block">&amp; Tech Visionary</span>
                 Awards 2025
               </h1>
               <p className="whitespace-nowrap text-base md:text-lg lg:text-xl font-light leading-relaxed max-w-full mt-4">
-              Empowering Innovation &amp; Transforming the Digital Frontier.
-            </p>
+                Empowering Innovation &amp; Transforming the Digital Frontier.
+              </p>
             </div>
-            {/* Tagline moved upward with negative margin */}
-            {/* <p className="whitespace-nowrap text-base md:text-lg lg:text-xl font-light leading-relaxed max-w-full -mt-2">
-              Empowering Innovation &amp; Transforming the Digital Frontier.
-            </p> */}
+
             <div className="flex flex-wrap justify-center md:justify-start gap-4">
               <div className="flex items-center bg-white bg-opacity-20 backdrop-blur-sm rounded-lg px-6 py-3 shadow-md">
                 <CalendarDays className="text-white mr-3" />

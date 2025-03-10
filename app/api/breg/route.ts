@@ -23,7 +23,7 @@ export async function POST(req: Request) {
       service: "gmail",
       auth: {
         user: "chvamshi03@gmail.com",
-        pass: "zfie hmte iyxt wyto", // ⚠️ Still not safe, but keeping as per your request
+        pass: "zfie hmte iyxt wyto", // ⚠️ Still not safe, but keeping as per your request..
       },
     })
 

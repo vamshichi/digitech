@@ -76,9 +76,9 @@ const AwardForm: React.FC = () => {
   return (
     <main className="container mx-auto p-6">
       <section className="text-center my-8">
-        <h1 className="text-3xl font-bold">
+        <h2 className="text-3xl font-bold">
           Tech Visionary Awards 2025 - Nomination Form
-        </h1>
+        </h2>
       </section>
 
       <form onSubmit={handleSubmit}>
